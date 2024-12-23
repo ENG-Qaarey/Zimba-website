@@ -3,7 +3,7 @@
     padding: 0;
 }
 #body{
-  font-weight: bold;
+    font-weight: bold;
     color: #fff;
     font-family: 'Arial', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
@@ -38,12 +38,96 @@ header {
 /* Navbar styling */
 .navbar {
     display: flex;
+    height: 30%;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    text-align: center;
+    background-image: url(../image/WhatsApp\ Image\ 2024-12-22\ at\ 07.26.44_2fbc3975.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: linear-gradient(45deg, #6a11cb, #2575fc); */
     padding: 10px 20px;
     color: #fff;
     font-family: 'Arial', sans-serif;
+}
+
+#chapter-project {
+  margin-top: -6px;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+#chapter-project > a {
+  display: block;
+  padding: 10px 20px;
+  /* background-color: #4CAF50;  */
+  color: rgb(250, 245, 245); /* White text */
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* #chapter-project > a:hover {
+  background-color: #45a049; 
+} */
+
+.dropdown {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: white; /* Dropdown background */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 0;
+  z-index: 1000;
+}
+
+#chapter-project:hover .dropdown {
+  display: block; /* Show on hover */
+}
+
+.dropdown li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 20px;
+  color: #333; /* Dark text */
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.dropdown a:hover {
+  background-color: #a49c9c; /* Light grey on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #chapter-project {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  #chapter-project > a {
+      width: 100%; /* Full width for mobile */
+  }
+
+  .dropdown {
+      position: relative;
+      width: 100%;
+  }
+
+  .dropdown a {
+    border-radius: 20px;
+      width: 94%; 
+  }
 }
 
 .nav-links {
@@ -56,7 +140,13 @@ header {
   z-index: 999;
     position: relative;
 }
-
+/* .nav-links li a:hover{
+  margin-top: -4px;
+  padding: 8px;
+  border-radius: 20px 0 20px 0;
+  color: white;
+  background: linear-gradient(28deg, #6a11cb, #2575fc);
+} */
 .nav-links a {
   z-index: 999;
     color: #fff;
@@ -64,7 +154,13 @@ header {
     font-weight: bold;
     transition: color 0.3s;
 }
-
+/* #main{
+  margin-top: -4px;
+  padding: 8px;
+  border-radius: 20px 0 20px 0;
+  color: white;
+  background: linear-gradient(28deg, #6a11cb, #2575fc);
+} */
 .nav-links a:hover {
     color: #ff5722;
 }
@@ -302,7 +398,10 @@ header {
 
 /* Footer Container Styling */
 .container-footer {
-  background: linear-gradient(28deg, #6a11cb, #2575fc);
+  background-image: url(../image/WhatsApp\ Image\ 2024-12-22\ at\ 07.26.43_be64c96c.jpg);
+  /* background: linear-gradient(28deg, #6a11cb, #2575fc); */
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
   text-align: center;
   padding: 20px;
@@ -365,6 +464,8 @@ header {
       width: 70%;
   }
 }
+
+
 
 /* chapters style */
 /* Main container */
@@ -903,3 +1004,101 @@ ul {
 .back-to-top {
   animation: fadeIn 0.5s ease-in-out;
 }
+
+
+
+/* project one */
+
+.h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-in-out;
+}
+.container8 {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+}
+input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-flag {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  background: #6a11cb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.flag-container {
+  margin-top: 20px;
+  text-align: center;
+}
+.flag-container img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+.flag-container img:hover {
+  transform: scale(1);
+}
+.error {
+  color: #ff6b6b;
+  margin-top: 15px;
+  font-size: 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  input, button {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* projrct one */
+
+

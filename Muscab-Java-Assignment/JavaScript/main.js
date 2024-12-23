@@ -973,3 +973,36 @@ function Ustad_Jamila(){
     document.getElementById('message').innerHTML = newArray;
 }
 // ustad jamila
+
+
+// projects 
+async function fetchFlag() {
+    const countryName = document.getElementById('countryName').value.trim();
+    const flagContainer = document.getElementById('flagContainer');
+    const errorContainer = document.getElementById('error');
+  
+    flagContainer.innerHTML = '';
+    errorContainer.textContent = '';
+  
+    if (!countryName) {
+      errorContainer.textContent = 'Please enter a country name.';
+      return;
+    }
+  
+    try {
+      const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
+      if (!response.ok) throw new Error('Country not found.');
+  
+      const data = await response.json();
+      const country = data[0];
+      const flagURL = country.flags.svg;
+  
+      flagContainer.innerHTML = `
+        <h2>${country.name.common}</h2>
+        <img src="${flagURL}" alt="Flag of ${country.name.common}" />
+      `;
+    } catch (error) {
+      errorContainer.textContent = error.message;
+    }
+  }
+  
